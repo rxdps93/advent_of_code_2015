@@ -124,8 +124,6 @@ public class MD5 {
     public static String of(String input) {
 
         byte[] md5 = instance.compute(input.getBytes());
-        System.out.println(md5);
-
         return instance.toHex(md5);
     }
 }
