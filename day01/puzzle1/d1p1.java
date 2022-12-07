@@ -1,4 +1,4 @@
-package puzzle1;
+package day01.puzzle1;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
