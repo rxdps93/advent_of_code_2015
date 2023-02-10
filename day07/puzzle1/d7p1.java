@@ -8,27 +8,22 @@ public class d7p1 {
 
     private static String and(String a, String b) {
         return Integer.toString(Integer.parseInt(a) & Integer.parseInt(b));
-//        return Short.toUnsignedInt((short)((int)a & (int)b));
     }
 
     private static String or(String a, String b) {
         return Integer.toString(Integer.parseInt(a) | Integer.parseInt(b));
-//        return Short.toUnsignedInt((short)((int)a | (int)b));
     }
 
     private static String not(String value) {
         return Integer.toString(~Integer.parseInt(value));
-//        return Short.toUnsignedInt((short)~(int)value);
     }
 
     private static String lshift(String value, String amnt) {
         return Integer.toString(Integer.parseInt(value) << Integer.parseInt(amnt));
-//        return Short.toUnsignedInt((short)((int)value << amnt));
     }
 
     private static String rshift(String value, String amnt) {
         return Integer.toString(Integer.parseInt(value) >> Integer.parseInt(amnt));
-//        return Short.toUnsignedInt((short)((int)value >> amnt));
     }
 
     public static void main(String[] args) {
