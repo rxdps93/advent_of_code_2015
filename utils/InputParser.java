@@ -36,6 +36,6 @@ public class InputParser {
     public String[] readLinesAsArray() {
         List<String> lines = readLinesAsList();
 
-        return lines.toArray(new String[0]);
+        return lines.toArray(String[]::new);
     }
 }
