@@ -33,7 +33,7 @@ public class d9p1 {
     }
 
     public static void main(String[] args) {
-        List<String> lines = new InputParser("day09/input.txt").readLinesAsList();
+        List<String> lines = InputParser.parse("day09/input.txt").asList();
 
         HashMap<Pair<String, String>, Integer> connections = new HashMap<>();
         HashSet<String> locations = new HashSet<>();

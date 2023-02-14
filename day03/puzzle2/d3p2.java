@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class d3p2 {
 
     public static void main(String[] args) {
-        String input = new InputParser("day03/input.txt").readLinesAsArray()[0];
+        String input = InputParser.parse("day03/input.txt").asArray()[0];
         HashMap<Pair<Integer, Integer>, Integer> grid = new HashMap<>();
 
         grid.put(Pair.of(0, 0), 1);

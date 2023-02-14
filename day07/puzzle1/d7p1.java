@@ -27,7 +27,7 @@ public class d7p1 {
     }
 
     public static void main(String[] args) {
-        List<String> lines = new InputParser("day07/input.txt").readLinesAsList();
+        List<String> lines = InputParser.parse("day07/input.txt").asList();
 
         HashMap<String, String> withValues = new HashMap<>();
         HashMap<String, String> toProcess = new HashMap<>();

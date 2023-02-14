@@ -27,7 +27,7 @@ public class d7p2 {
     }
 
     public static void main(String[] args) {
-        List<String> lines = new InputParser("day07/input.txt").readLinesAsList();
+        List<String> lines = InputParser.parse("day07/input.txt").asList();
 
         int b = -1;
 

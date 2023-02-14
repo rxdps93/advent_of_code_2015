@@ -8,8 +8,8 @@ import java.util.List;
 public class d2p2 {
     public static void main(String[] args) {
 
-        InputParser parser = new InputParser("day02/input.txt");
-        List<String> input = parser.readLinesAsList();
+        InputParser parser = InputParser.parse("day02/input.txt");
+        List<String> input = parser.asList();
 
         int sum = 0;
         for (String box : input) {

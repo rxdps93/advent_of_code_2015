@@ -9,7 +9,7 @@ import java.util.List;
 public class d6p1 {
 
     public static void main(String [] args) {
-        List<String> instructions = new InputParser("day06/input.txt").readLinesAsList();
+        List<String> instructions = InputParser.parse("day06/input.txt").asList();
 
         HashMap<Pair<Integer, Integer>, Integer> lights = new HashMap<>();
         for (String instr : instructions) {

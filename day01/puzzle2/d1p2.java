@@ -1,7 +1,6 @@
 package day01.puzzle2;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class d1p2 {

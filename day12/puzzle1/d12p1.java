@@ -9,7 +9,7 @@ public class d12p1 {
 
     public static void main(String[] args) {
 
-        String input = new InputParser("day12/input.txt").readLinesAsArray()[0];
+        String input = InputParser.parse("day12/input.txt").asString();
 
         Matcher match = Pattern.compile("([-0-9]+)").matcher(input);
         int sum = 0;

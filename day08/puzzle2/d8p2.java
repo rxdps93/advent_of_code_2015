@@ -6,7 +6,7 @@ import java.util.List;
 
 public class d8p2 {
     public static void main(String [] args) {
-        List<String> lines = new InputParser("day08/input.txt").readLinesAsList();
+        List<String> lines = InputParser.parse("day08/input.txt").asList();
 
         int strSum = 0;
         int memSum = 0;

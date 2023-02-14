@@ -6,7 +6,7 @@ import utils.MD5;
 public class d4p1 {
 
     public static void main(String [] args) {
-        String key = new InputParser("day04/input.txt").readLinesAsArray()[0];
+        String key = InputParser.parse("day04/input.txt").asArray()[0];
 
         int num = 1;
         String input = key + num;

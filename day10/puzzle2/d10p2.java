@@ -4,7 +4,7 @@ import utils.InputParser;
 
 public class d10p2 {
     public static void main(String[] args) {
-        char[] input = new InputParser("day10/input.txt").readLinesAsArray()[0].toCharArray();
+        char[] input = InputParser.parse("day10/input.txt").asArray()[0].toCharArray();
 
         for (int i = 0; i < 50; i++) {
 

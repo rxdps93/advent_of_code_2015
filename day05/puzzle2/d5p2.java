@@ -22,7 +22,7 @@ public class d5p2 {
     }
 
     public static void main(String[] args) {
-        List<String> lines = new InputParser("day05/input.txt").readLinesAsList();
+        List<String> lines = InputParser.parse("day05/input.txt").asList();
 
         parse(lines);
 

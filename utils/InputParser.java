@@ -10,11 +10,11 @@ public class InputParser {
 
     private final String fileName;
 
-    public InputParser(String fileName) {
+    private InputParser(String fileName) {
         this.fileName = fileName;
     }
 
-    public List<String> readLinesAsList() {
+    public List<String> asList() {
 
         try {
             BufferedReader input = new BufferedReader(new FileReader(this.fileName));
@@ -33,9 +33,18 @@ public class InputParser {
         return null;
     }
 
-    public String[] readLinesAsArray() {
-        List<String> lines = readLinesAsList();
+    public String[] asArray() {
+        List<String> lines = asList();
 
         return lines.toArray(String[]::new);
     }
+
+    public String asString() {
+        return String.join("", asList());
+    }
+
+    public static InputParser parse(String fileName) {
+        return new InputParser(fileName);
+    }
+
 }
