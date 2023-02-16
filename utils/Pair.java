@@ -9,6 +9,14 @@ public class Pair<K, V> {
         this.second = second;
     }
 
+    public K first() {
+        return this.first;
+    }
+
+    public V second() {
+        return this.second;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
