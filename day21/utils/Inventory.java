@@ -11,6 +11,7 @@ public class Inventory {
         this.weapon = w;
         this.armor = a;
         if (rl == rr) {
+            System.out.println("hi");
             this.ringLeft = null;
             this.ringRight = null;
         } else {

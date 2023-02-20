@@ -32,6 +32,6 @@ public enum Armor {
 
     @Override
     public String toString() {
-        return String.format("%s [ %d atk, %d gp ]", this.name, this.value, this.cost);
+        return String.format("%s [ %d def, %d gp ]", this.name, this.value, this.cost);
     }
 }

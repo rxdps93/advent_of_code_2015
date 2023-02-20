@@ -1,7 +1,7 @@
 package day21.utils;
 
 public enum Weapon {
-    NONE(0, 0, "None"),
+
     DAGGER(4, 8, "Dagger"),
     SHORTSWORD(5, 10, "Shortsword"),
     WARHAMMER(6, 25, "Warhammer"),
