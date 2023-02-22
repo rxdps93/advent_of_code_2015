@@ -1,11 +1,11 @@
-package day22.puzzle1;
+package day22.puzzle2;
 
 import utils.InputParser;
 
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
-public class d22p1 {
+public class d22p2 {
 
     private enum Spell {
         MAGIC_MISSILE(53, null),
@@ -124,26 +124,30 @@ public class d22p1 {
         while (!queue.isEmpty()) {
             GameState current = queue.poll();
 
-            current.processEffects();
-            for (Spell s : Spell.values()) {
-                if (current.isCastable(s)) {
-                    GameState next = current.clone();
-                    next.cast(s);
-                    next.processEffects();
+            current.playerHP--;
 
-                    if (next.bossHP <= 0) {
-                        bestManaSpent = Math.min(bestManaSpent, next.spentMP);
-                        queue.removeIf(gs -> gs.spentMP > next.spentMP);
-                    } else {
-                        next.playerHP -= Math.max(next.bossATK - next.playerDEF, 1);
-                        if (next.playerHP > 0 && next.playerMP > 0 && next.spentMP < bestManaSpent) {
-                            queue.add(next);
+            if (current.playerHP > 0) {
+                current.processEffects();
+                for (Spell s : Spell.values()) {
+                    if (current.isCastable(s)) {
+                        GameState next = current.clone();
+                        next.cast(s);
+                        next.processEffects();
+
+                        if (next.bossHP <= 0) {
+                            bestManaSpent = Math.min(bestManaSpent, next.spentMP);
+                            queue.removeIf(gs -> gs.spentMP > next.spentMP);
+                        } else {
+                            next.playerHP -= Math.max(next.bossATK - next.playerDEF, 1);
+                            if (next.playerHP > 0 && next.playerMP > 0 && next.spentMP < bestManaSpent) {
+                                queue.add(next);
+                            }
                         }
                     }
                 }
             }
         }
 
-        System.out.println("The least mana you can spend is " + bestManaSpent);
+        System.out.println("The least mana you can spend on hard mode is " + bestManaSpent);
     }
 }
