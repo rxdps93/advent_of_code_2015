@@ -1,5 +1,7 @@
 # Advent of Code 2015
 
+### 2015 Completed!
+
 I'm doing it in Java.
 
 [Join in the fun!](adventofcode.com)
@@ -76,6 +78,6 @@ I'm doing it in Java.
 - [x] Day 24
   - [x] puzzle 1
   - [x] puzzle 2
-- [ ] Day 25
-  - [ ] puzzle 1
-  - [ ] puzzle 2
+- [x] Day 25
+  - [x] puzzle 1
+  - [x] puzzle 2
